@@ -1,9 +1,9 @@
 
 export class Product {
-    id! : Number
+    id! : number
     name! : string
     description! : string
-    price! : Number
+    price! : number
     addedOn! : Date
     image!: Uint8Array;
     imageUrl! : string

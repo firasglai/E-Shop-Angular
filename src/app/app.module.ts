@@ -14,7 +14,8 @@ import { FormsModule } from '@angular/forms'
 import { HttpClientModule } from "@angular/common/http";
 import { FooterComponent } from './components/footer/footer.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
-
+import { UserNavbarComponent } from './components/user-navbar/user-navbar.component';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 @NgModule({
   declarations: [
     AppComponent,
@@ -28,12 +29,14 @@ import { NavbarComponent } from './components/navbar/navbar.component';
     HomeComponent,
     FooterComponent,
     NavbarComponent,
+    UserNavbarComponent,
 
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
+    FontAwesomeModule,
     HttpClientModule
   ],
   providers: [],
