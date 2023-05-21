@@ -12,6 +12,8 @@ import { AuthComponent } from './layouts/auth/auth.component';
 import { HomeComponent } from './components/home/home.component';
 import { FormsModule } from '@angular/forms'
 import { HttpClientModule } from "@angular/common/http";
+import { FooterComponent } from './components/footer/footer.component';
+import { NavbarComponent } from './components/navbar/navbar.component';
 
 @NgModule({
   declarations: [
@@ -24,6 +26,8 @@ import { HttpClientModule } from "@angular/common/http";
     RegisterComponent,
     AuthComponent,
     HomeComponent,
+    FooterComponent,
+    NavbarComponent,
 
   ],
   imports: [

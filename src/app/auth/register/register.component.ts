@@ -46,6 +46,7 @@ export class RegisterComponent {
             this.username, this.password, this.email, this.email, this.address, this.phone).subscribe((token : Token) => {
                 localStorage.setItem('token', token.token);
                 this.router.navigateByUrl('/account').then(() => window.location.reload())
+                console.log(token)
             }, (error : ErrorEvent) => {
                 this.error = error.error
             })
