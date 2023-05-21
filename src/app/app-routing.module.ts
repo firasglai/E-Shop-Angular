@@ -7,7 +7,9 @@ import { HomeComponent } from './components/home/home.component';
 import { ProductDetailComponent } from './components/product-detail/product-detail.component';
 import { ProductListComponent } from './components/product-list/product-list.component';
 import { UserDetailComponent } from './components/user-detail/user-detail.component';
+import { UserSettingsComponent } from './components/user-settings/user-settings.component';
 import { AuthComponent } from './layouts/auth/auth.component';
+import { ShopComponent } from './layouts/shop/shop.component';
 
 const routes: Routes = [
 { 
@@ -20,13 +22,31 @@ const routes: Routes = [
   ],
 },
 
+{ 
+  path: "home",
+  component: ShopComponent,
+  children: [
+    {path: 'shop', component: ProductListComponent},
+    {path: 'shop/:term', component: ProductListComponent},
+    {path: 'shop/products/:id', component: ProductDetailComponent},
+    {path: 'account', component: UserDetailComponent},
+    {path: 'cart', component: CartComponent},
+    {path: 'settings', component: UserSettingsComponent},
+    { path: "", redirectTo: "shop", pathMatch: "full" },
+  ],
+},
+
+
+
+/*
 {path:'',component:HomeComponent},
 {path: 'shop', component: ProductListComponent},
 {path: 'shop/:term', component: ProductListComponent},
 {path: 'shop/products/:id', component: ProductDetailComponent},
 {path: 'account', component: UserDetailComponent},
 {path: 'cart', component: CartComponent}
-
+*/
+{path:'',component:HomeComponent},
 ];
 
 @NgModule({

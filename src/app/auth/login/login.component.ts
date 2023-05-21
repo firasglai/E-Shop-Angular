@@ -18,7 +18,7 @@ export class LoginComponent {
 
   ngOnInit(): void {
     if (localStorage.getItem('token')) {
-        this.router.navigateByUrl('/account')
+        this.router.navigateByUrl('/home/shop')
     }
 }
 
@@ -28,7 +28,7 @@ export class LoginComponent {
       this.usersService.login(
           this.username, this.password).subscribe((token : Token) => {
               localStorage.setItem('token', token.token);
-              this.router.navigateByUrl('/account').then(() => window.location.reload())
+              this.router.navigateByUrl('/home/shop').then(() => window.location.reload())
           }, (error : ErrorEvent) => {
               console.log(error);
               this.error = "Invalid login credentials"

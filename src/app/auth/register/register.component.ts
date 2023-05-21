@@ -23,7 +23,7 @@ export class RegisterComponent {
 
     ngOnInit(): void {
         if (localStorage.getItem('token')) {
-          this.router.navigateByUrl('/auth/login')
+          this.router.navigateByUrl('/home/shop')
         }
     }
 
@@ -45,7 +45,7 @@ export class RegisterComponent {
         this.usersService.register(
             this.username, this.password, this.email, this.email, this.address, this.phone).subscribe((token : Token) => {
                 localStorage.setItem('token', token.token);
-                this.router.navigateByUrl('/account').then(() => window.location.reload())
+                this.router.navigateByUrl('/home/shop').then(() => window.location.reload())
                 console.log(token)
             }, (error : ErrorEvent) => {
                 this.error = error.error

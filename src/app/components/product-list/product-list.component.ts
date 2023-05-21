@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-
+import { SwiperOptions } from 'swiper';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Product } from 'src/app/models/product';
 import { ProductsService } from 'src/app/services/products.service';
@@ -28,6 +28,7 @@ export class ProductListComponent {
               
           }
       }, (error: ErrorEvent) => {
+        
       })
   }
 }

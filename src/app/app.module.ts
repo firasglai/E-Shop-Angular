@@ -16,6 +16,9 @@ import { FooterComponent } from './components/footer/footer.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { UserNavbarComponent } from './components/user-navbar/user-navbar.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { SwiperModule } from 'swiper/angular';
+import { ShopComponent } from './layouts/shop/shop.component';
+import { UserSettingsComponent } from './components/user-settings/user-settings.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -30,6 +33,8 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
     FooterComponent,
     NavbarComponent,
     UserNavbarComponent,
+    ShopComponent,
+    UserSettingsComponent,
 
   ],
   imports: [
@@ -37,7 +42,8 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
     AppRoutingModule,
     FormsModule,
     FontAwesomeModule,
-    HttpClientModule
+    HttpClientModule,
+    SwiperModule
   ],
   providers: [],
   bootstrap: [AppComponent]
