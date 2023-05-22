@@ -10,6 +10,8 @@ import { UserDetailComponent } from './components/user-detail/user-detail.compon
 import { UserSettingsComponent } from './components/user-settings/user-settings.component';
 import { AuthComponent } from './layouts/auth/auth.component';
 import { ShopComponent } from './layouts/shop/shop.component';
+import { CheckedComponent } from './components/checked/checked.component';
+
 
 const routes: Routes = [
 { 
@@ -31,10 +33,16 @@ const routes: Routes = [
     {path: 'shop/products/:id', component: ProductDetailComponent},
     {path: 'account', component: UserDetailComponent},
     {path: 'cart', component: CartComponent},
+    { 
+      path: 'checked',
+      component: CheckedComponent
+    },
+    
     {path: 'settings', component: UserSettingsComponent},
     { path: "", redirectTo: "shop", pathMatch: "full" },
   ],
 },
+
 
 
 

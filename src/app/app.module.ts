@@ -19,6 +19,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { SwiperModule } from 'swiper/angular';
 import { ShopComponent } from './layouts/shop/shop.component';
 import { UserSettingsComponent } from './components/user-settings/user-settings.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -35,6 +36,7 @@ import { UserSettingsComponent } from './components/user-settings/user-settings.
     UserNavbarComponent,
     ShopComponent,
     UserSettingsComponent,
+
 
   ],
   imports: [
